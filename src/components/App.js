@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import Home from './Home.js';
-import Roster from './Roster.js';
+import { Home, Roster } from './index';
 import './App.css';
 
 class App extends Component {
@@ -11,11 +10,13 @@ class App extends Component {
         <header className="App-header">
         </header>
         <ul>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/home">Home</Link></li>
             <li><Link to="/roster">Roster</Link></li>
         </ul>
-        <Route exact path='/' component={Home} />
-        <Route path="/roster" component={Roster} />
+        <Switch>
+          <Route exact path='/home' component={Home} />
+          <Route path="/roster" component={Roster} />
+        </Switch>
       </div>
     );
   }
