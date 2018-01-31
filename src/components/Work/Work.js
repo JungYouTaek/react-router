@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import './Work.css';
 
-class Roaster extends Component {
+class Work extends Component {
   render() {
     return (
       <div>
-        <h2>Roaster</h2>
+        <h2>Work</h2>
       </div>
     );
   }
 }
 
-export default Roaster;
+export default Work;
