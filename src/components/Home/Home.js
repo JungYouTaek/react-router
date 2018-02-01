@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'styles/css/Home/Home.css';
 
 class Home extends Component {
   constructor(props) {

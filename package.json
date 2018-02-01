@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/ -o src/styles/css",
-    "watch-css": "yarn run build-css && node-sass-chokidar src/styles -o src/styles/css --watch --recursive",
+    "watch-css": "yarn run build-css --watch --recursive",
     "start-js": "cross-env NODE_PATH=src react-scripts start",
     "start-node": "nodemon server/main.js",
     "start": "npm-run-all -p watch-css start-js start-node",
