@@ -17,12 +17,15 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/ -o src/styles/css",
     "watch-css": "yarn run build-css && node-sass-chokidar src/styles -o src/styles/css --watch --recursive",
-    "start-js": "react-scripts start",
+    "start-js": "cross-env NODE_PATH=src react-scripts start",
     "start-node": "nodemon server/main.js",
     "start": "npm-run-all -p watch-css start-js start-node",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "build": "cross-env NODE_PATH=src react-scripts build",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "cross-env": "^5.1.3"
+  }
 }
